@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head runat="server"> 
+	<meta charset="UTF-8">
+	<script src="jquery.js"></script> 
+	<style> 
+		.box { 
+			width: 119px; 
+			height: 37px; 
+			background-color: #53AD3F; 
+			background-repeat: no-repeat; 
+			background-position: 0 0; 
+			background-attachment: scroll; 
+			line-height: 37px; 
+			text-align: center; 
+			color: white; 
+			cursor: pointer; 
+		} 
+		.none { 
+			width: 0px; 
+			height: 0px; 
+			display: none; 
+		} 
+	</style> 
+	<title>文件上传 /></title> 
+</head> 
+<body> 
+	<form id="form1" runat="server" method="post" enctype="multipart/form-data"> 
+		<div> 
+			<div class="box">选择图片</div> 
+		</div> 
+		<div class="none"> 
+			<input type="file" name="f" id="f" /> 
+		</div> 
+	</form> 
+</body> 
+</html> 
+<script> 
+	$(function () { 
+		$(".box").click(function () { 
+			$("#f").click(); 
+		}); 
+	}); 
+</script> 
